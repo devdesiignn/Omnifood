@@ -1,16 +1,3 @@
-console.log("Hello world!");
-
-const myName = "Jonas Schmedtmann";
-const h1 = document.querySelector(".heading-primary");
-console.log(myName);
-console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
-
 ///////////////////////////////////////////////////////////
 // Set current year
 const yearEl = document.querySelector(".year");
@@ -64,7 +51,7 @@ const sectionHeroEl = document.querySelector(".section-hero");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
+    // console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -97,7 +84,7 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+  // console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
@@ -105,6 +92,7 @@ checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
+// IF FLEXBOX === NOT SUPPORTED
 /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 4.8rem;
